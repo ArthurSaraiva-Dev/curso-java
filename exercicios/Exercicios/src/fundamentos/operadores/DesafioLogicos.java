@@ -12,7 +12,7 @@ public class DesafioLogicos {
         boolean tv32 = job1 ^ job2;
         boolean icecream = tv50 || tv32;
         boolean heath = !icecream;
-        boolean home = job1 ^ job2;
+        boolean home = !(job1 || job2);
 
         System.out.println("A família terá tv de 50 polegadas?: " + tv50);
         System.out.println("A família terá tv de 32 polegadas?: " + tv32);
