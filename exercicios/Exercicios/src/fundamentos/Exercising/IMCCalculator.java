@@ -20,8 +20,8 @@ public class IMCCalculator {
         String height = input.nextLine().replace(",", ".").trim();
 
         // Data processing
-        Double weightDouble = Double.parseDouble(weight);
-        Double heightDouble = Double.parseDouble(height);
+        double weightDouble = Double.parseDouble(weight);
+        double heightDouble = Double.parseDouble(height);
 
         // Calculation of data
         // IMC = weight / (height squared)
