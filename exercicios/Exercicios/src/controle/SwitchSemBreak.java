@@ -1,6 +1,6 @@
 package controle;
 
-public class Switch1 {
+public class SwitchSemBreak {
     public static void main(String[] args) {
         // Modo não usual (sem o break)
 
