@@ -5,32 +5,35 @@ import java.util.Scanner;
 public class SwitchComBreak {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        System.out.print("Digite a nota do aluno");
-        double nota = entrada.nextDouble();
+        
+        
+        System.out.print("Digite a nota do aluno:");
+        int nota = entrada.nextInt();
+
+        String conceito = "";
 
         switch (nota) {
-            case nota >= 9:
-                System.out.println("Aluno nota A!");
+            case 10: case 9:
+                conceito = "A";
                 break;
-            case nota <= 9 && nota > 8:
-                System.out.println("Aluno nota B!");
+            case 8: case 7:
+                conceito = "B";              
                 break;
-            case nota <= 8 && nota >= 6.5:
-                System.out.println("Aluno nota C!");
+            case 6: case 5:
+                conceito = "C";
                 break;
-            case nota <= 6.5 && nota >= 5:
-                System.out.println("Aluno nota D!");
+            case 4:
+                conceito = "E";
                 break;
-            case nota <= 4.5 && nota >= 3.5:
-                System.out.println("Aluno em recuperação");
+            case 3: case 2: case 1: case 0:
+                conceito = "F";
                 break;
-            case nota < 3:
-                System.out.println("Aluno Reprovado.");
             default:
-                System.out.println("Nota Inválida!!");
+                conceito = "Conceito Inválido.";
                 break;
         }
 
+        System.out.printf("O aluno se qualifica como: %s", conceito);
         entrada.close();
     }
 }
